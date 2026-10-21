@@ -146,8 +146,8 @@ frame.before(guide);
 const menu=document.createElement('button');menu.type='button';menu.className='mobile-menu-toggle';menu.setAttribute('aria-label','Abrir menú de la demo');menu.setAttribute('aria-controls','demo-navigation');menu.setAttribute('aria-expanded','false');menu.innerHTML='<span aria-hidden="true">☰</span>';
 frame.querySelector('.app-top').prepend(menu);
 const backdrop=document.createElement('button');backdrop.type='button';backdrop.className='mobile-menu-backdrop';backdrop.setAttribute('aria-label','Cerrar menú de la demo');frame.append(backdrop);
-function closeMenu(restore=false){frame.classList.remove('mobile-menu-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menú de la demo');frame.querySelector('.app-work').inert=false;if(restore)menu.focus();}
-menu.onclick=()=>{const open=!frame.classList.contains('mobile-menu-open');frame.classList.toggle('mobile-menu-open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Cerrar menú de la demo':'Abrir menú de la demo');frame.querySelector('.app-work').inert=open;if(open)sidebar.querySelector('button')?.focus();};
+function closeMenu(restore=false){frame.classList.remove('mobile-menu-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menú de la demo');frame.querySelector('.app-work').inert=false;if(restore)menu.focus({preventScroll:true});}
+menu.onclick=()=>{const open=!frame.classList.contains('mobile-menu-open');frame.classList.toggle('mobile-menu-open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Cerrar menú de la demo':'Abrir menú de la demo');frame.querySelector('.app-work').inert=open;if(open)sidebar.querySelector('button')?.focus({preventScroll:true});};
 backdrop.onclick=()=>closeMenu(true);
 sidebar.addEventListener('click',e=>{if(e.target.closest('[data-goto]'))closeMenu();});
 frame.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closeMenu(true);}});
