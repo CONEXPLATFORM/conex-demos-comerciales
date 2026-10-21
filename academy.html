@@ -63,6 +63,8 @@
 }
 @media(max-width:360px){.mobile-flow-guide{height:144px;padding-left:16px;padding-right:16px}.mobile-flow-guide p{font-size:14px}.app-inner{height:calc(100svh - 280px)}.flow-tabs{gap:20px;padding-left:16px;padding-right:16px}.flow-tabs button{font-size:12px}.flow-data>div{gap:7px}.flow-data>div>span{width:57px}.flow-data small{font-size:10px}.flow-data button{font-size:11px}}
 @media(max-width:600px){.copy .intro,.screen .copy .intro{min-height:110px}}
+/* Live example states: readable controls and visible progress, no layout scaling. */
+.motion-status{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;background:#111c2a;border-bottom:1px solid #2b4055;font:12px/1.5 system-ui;color:#adcae4;min-height:58px;box-sizing:border-box}.motion-status span{flex:1}.motion-status button{background:#23394e;border:1px solid #486a88;border-radius:8px;color:#edf6ff;padding:10px 12px;cursor:pointer;white-space:nowrap;min-height:42px}.motion-status button:disabled{opacity:.7;cursor:progress}.is-streaming:after,.motion-generating .paper p:last-of-type:after{content:'▍';color:#8ec8ff;animation:stream-cursor .7s steps(2,end) infinite}.motion-generating .paper{box-shadow:0 0 0 1px #8bb9dc55}.motion-waiting{opacity:.3}.motion-highlight{animation:motion-highlight 1.2s ease-out}.test-question button.answer-wrong{border-color:#e89b9b;background:#472d38}.test-question button.answer-correct{border-color:#72c5a4;background:#193e36}.answer-result.checking{color:#adcde9}.answer-result.correct{border-left:3px solid #72c5a4;padding-left:12px}.answer-result.incorrect{border-left:3px solid #e4b77c;padding-left:12px}.answer-result{line-height:1.6!important}.motion-generating .assistant-response{animation:none!important}@keyframes stream-cursor{50%{opacity:0}}@keyframes motion-highlight{from{background:#4481ac40}to{background:transparent}}@media(max-width:600px){.motion-status{padding:10px 16px;font-size:12px;gap:10px}.motion-status button{font-size:12px;min-height:44px;max-width:140px}.motion-generating .paper{min-height:280px}}@media(prefers-reduced-motion:reduce){.motion-highlight,.is-streaming:after{animation:none}}
 </style></head><body><div class="scroll-story"><div class="screen"><div class="review">PROPUESTA PARA REVISIÓN <span>Precios provisionales</span></div><header><a class="brand" href="#">CON<span>E</span>X <small>ACADEMY</small></a><a class="contact-top" href="mailto:sara@conexplatform.com">Sara ↗</a></header><main><section class="copy"><span class="eyebrow">PARA OPOSITORES · PRÓXIMO LANZAMIENTO</span><h1>Tu oposición.<br> Tu espacio.<br> <em>Tu tutor.</em></h1><p class="intro" id="step-explanation">Temario oficial, miles de test personalizados y un tutor de IA para preparar tu oposición de principio a fin.</p><ul><li>Temario oficial, explicaciones y resúmenes.</li><li>Miles de test: por tema, combinados y simulacros.</li><li>Correcciones, repasos y orientación para inscribirte.</li></ul><div class="conversion"><a class="cta" href="https://wa.me/34688862232?text=Hola%20Sara%2C%20quiero%20informaci%C3%B3n%20del%20pr%C3%B3ximo%20lanzamiento%20de%20CONEX%20Academy." target="_blank" rel="noopener">Quiero información <span>↗</span></a><div class="price">100 €/mes<small>Precio provisional · Academy integral en desarrollo</small></div></div><details><summary>Alcance y condiciones <span>+</span></summary><p>Academy integral prevista: temario oficial y material original autorizado, resúmenes, tutor de texto/voz, miles de test personalizados por tema o combinados, simulacros, supuestos, correcciones con IA, progreso y repasos, novedades y orientación sobre requisitos e inscripción. Próximo lanzamiento: catálogo, volumen efectivo de preguntas, fuentes, fechas y módulos se confirmarán antes de contratar. No incluye corrección humana ni presentación automática de solicitudes. Impuestos, límites y condiciones comerciales pendientes.</p></details></section><section class="app-area" aria-label="Maqueta ilustrativa de CONEX"><div class="app-frame"><div class="app-top"><span class="app-brand">CONEX <b>ACADEMY</b></span><span class="mock-label">DEMO INTERACTIVA</span></div><div class="app-inner"><aside class="product-sidebar" aria-label="Navegación de la maqueta"><button class="new-chat" data-goto="0">＋ <span>Nuevo chat</span></button><span class="sidebar-section">ESPACIO DE TRABAJO</span><button data-goto="1" class="sidebar-nav"><span class="nav-symbol">▤</span>Mi temario</button><button data-goto="2" class="sidebar-nav"><span class="nav-symbol">☷</span>Exámenes y test</button><button data-goto="4" class="sidebar-nav"><span class="nav-symbol">▣</span>Resúmenes</button><div class="folder-title"><span>MIS CARPETAS</span><button type="button" id="add-folder" aria-label="Crear carpeta de ejemplo">＋</button></div><div id="folder-list"><button data-goto="5" class="folder-item">⌑ <span>Constitución</span></button><button data-goto="5" class="folder-item">⌑ <span>Mis supuestos</span></button></div><div class="folder-create" hidden><input id="folder-name" placeholder="Nombre de la carpeta" maxlength="35" aria-label="Nombre de la carpeta de ejemplo"><button id="save-folder">Crear</button></div><div class="sidebar-user"><span class="avatar">OP</span><div>Mi preparación<small>Maqueta · Datos ficticios</small></div></div></aside><div class="app-work"><div id="media-slot" class="media-slot" aria-live="polite"></div></div></div><div class="app-bottom"><span class="status-dot"></span><span id="step-caption"></span><span class="counter" id="counter"></span></div></div><div class="example-tabs" role="tablist" aria-label="Recorrido de la app"><button type="button" role="tab" id="tab-0" aria-controls="media-slot" data-step="0"><span>01</span>Tu tutor</button><button type="button" role="tab" id="tab-1" aria-controls="media-slot" data-step="1"><span>02</span>Mi temario</button><button type="button" role="tab" id="tab-2" aria-controls="media-slot" data-step="2"><span>03</span>Exámenes y test</button><button type="button" role="tab" id="tab-3" aria-controls="media-slot" data-step="3"><span>04</span>Corrección IA</button><button type="button" role="tab" id="tab-4" aria-controls="media-slot" data-step="4"><span>05</span>Resúmenes</button><button type="button" role="tab" id="tab-5" aria-controls="media-slot" data-step="5"><span>06</span>Mi preparación</button></div><div class="scroll-cue"><span>↓ Desliza un poco para ver el siguiente paso</span><span id="scroll-step">01 / 03</span></div><p class="caption">Demostración interactiva · Datos ficticios · Sin conexión al producto.</p></section></main><footer>IA como apoyo. Tu criterio marca el camino.<a href="mailto:sara@conexplatform.com">sara@conexplatform.com ↗</a></footer></div></div><script type="application/json" id="compact-data">{"label": "ACADEMY", "tag": "PARA OPOSITORES · PRÓXIMO LANZAMIENTO", "title": "Comprende.<br> Practica.<br> <em>Avanza.</em>", "intro": "Temario oficial, miles de test personalizados y un tutor de IA para preparar tu oposición de principio a fin.", "benefits": ["Temario oficial, explicaciones y resúmenes.", "Miles de test: por tema, combinados y simulacros.", "Correcciones, repasos y orientación para inscribirte."], "price": "100 €/mes", "note": "Precio provisional · Academy integral en desarrollo", "cta": "Quiero información", "message": "Hola Sara, quiero información del próximo lanzamiento de CONEX Academy.", "steps": ["Tu tutor", "Mi temario", "Exámenes y test", "Corrección IA", "Resúmenes", "Mi preparación"], "views": [["01 / TEMARIO Y TUTOR IA", "Todo lo que tienes que estudiar.", "Temario oficial de tu oposición y consulta del material original.", "Resúmenes para repasar|Explicaciones y dudas por texto o voz|Ejemplos para comprender lo difícil", "Catálogo y materiales previstos para el lanzamiento · Por confirmar"], ["02 / PRÁCTICA PERSONALIZADA", "Miles de test. Tu forma de practicar.", "Elige un tema concreto o combina el temario para poner a prueba tu preparación.", "Test por tema o de todo el temario|Simulacros y supuestos prácticos|Correcciones de IA con explicación de errores", "Banco previsto para Academy integral · Ejemplo ilustrativo"], ["03 / PLAN Y CONVOCATORIA", "Del repaso a presentarte.", "Organiza lo que necesitas trabajar y entiende los pasos de tu convocatoria.", "Progreso, errores y repasos personalizados|Requisitos, documentación y plazos oficiales|Orientación para inscribirte en el trámite oficial", "No presenta solicitudes por ti · Fuentes y catálogo sujetos a validación"]], "detail": "Academy integral prevista: temario oficial y material original autorizado, resúmenes, tutor de texto/voz, miles de test personalizados por tema o combinados, simulacros, supuestos, correcciones con IA, progreso y repasos, novedades y orientación sobre requisitos e inscripción. Próximo lanzamiento: catálogo, volumen efectivo de preguntas, fuentes, fechas y módulos se confirmarán antes de contratar. No incluye corrección humana ni presentación automática de solicitudes.", "head": "Tu oposición.<br> Tu espacio.<br> <em>Tu tutor.</em>", "explanations": ["Un chat de IA como centro de tu preparación. A la izquierda, tu temario, test, resúmenes y las carpetas que crees.", "Consulta el temario oficial y los materiales autorizados de tu convocatoria. Pregunta por texto o voz y vuelve al original.", "Practica miles de test personalizados por tema o combinando todo el temario, junto con simulacros y supuestos.", "Comprende cada error con explicaciones de IA. Los simulacros puntuados seguirán las reglas verificadas de la convocatoria.", "Pide resúmenes de tus temas y guarda el material de repaso organizado por asignatura.", "Organiza tus carpetas, revisa qué necesitas repasar y consulta requisitos, documentación y pasos para presentarte."], "nav": ["Mi temario", "Exámenes y test", "Resúmenes"], "navmap": [1, 2, 4], "folders": ["Constitución", "Mis supuestos"]}</script><script>// Visual adapter: synthetic product views, replaceable independently of the sales copy.
 const ico=(name)=>{const paths={file:'M6 3h8l4 4v14H6z M14 3v5h5 M9 12h6 M9 16h6',mic:'M9 5a3 3 0 0 1 6 0v6a3 3 0 0 1-6 0z M6 10v1a6 6 0 0 0 12 0v-1 M12 17v4 M9 21h6',search:'M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14 M15 15l6 6',check:'M5 12l4 4L19 6',clock:'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20 M12 6v6l4 2',link:'M9 15l6-6 M8 17l-2 2a4 4 0 0 1-5-5l4-4a4 4 0 0 1 5 0 M14 7l2-2a4 4 0 0 1 5 5l-4 4a4 4 0 0 1-5 0',users:'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M2 21v-3a7 7 0 0 1 14 0v3 M17 4a3 3 0 0 1 0 6 M19 14a5 5 0 0 1 3 4v3'};return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name]||paths.file}"/></svg>`};
 const wave=()=>`<div class="voice-wave">${[6,13,8,21,27,17,10,23,31,16,25,12,18,28,21,10,17,24,13,6,12,19,9,15,23,11,7,17].map(h=>`<i style="height:${h}px"></i>`).join('')}</div>`;
@@ -201,6 +203,11 @@ window.initConexFlow=(slot)=>{
   const answer=document.createElement('div');answer.className='live-answer';answer.innerHTML='<span class="answer-brand">✦</span><div class="answer-body"><div class="thinking"><i></i><i></i><i></i><span>Preparando ejemplo</span></div></div>';conversation.append(answer);
   await wait(matchMedia('(prefers-reduced-motion: reduce)').matches?0:700);if(stopped)return;
   const body=answer.querySelector('.answer-body');body.innerHTML=reply;
+  const streamNodes=[];const walker=document.createTreeWalker(body,NodeFilter.SHOW_TEXT);let textNode;
+  while(textNode=walker.nextNode()){if(textNode.textContent.trim()&&!textNode.parentElement.closest('button'))streamNodes.push([textNode,textNode.textContent]);}
+  streamNodes.forEach(([node])=>node.textContent='');body.classList.add('is-streaming');
+  for(const [node,text] of streamNodes){for(let n=0;n<text.length;n+=4){if(stopped)return;node.textContent=text.slice(0,n+4);conversation.scrollTop=conversation.scrollHeight;await wait(matchMedia('(prefers-reduced-motion: reduce)').matches?0:24);}}
+  body.classList.remove('is-streaming');
   const ref=document.createElement('div');ref.className='source-pill';ref.textContent=academy?'Tema de ejemplo · Conceptos generales':'Fuente · Relato de demostración · Sin guardar';body.append(ref);
   const note=document.createElement('small');note.className='simulated-note';note.textContent=automatic?'Respuesta de demostración predefinida.':'Demostración predefinida: este ejemplo no analiza tu texto ni consulta una IA.';body.append(note);
   if(!academy){slot.querySelector('.live-scope').firstChild.textContent='Ejemplo sin guardar';slot.querySelector('.composer-context').textContent='Relato de demostración';}
@@ -214,5 +221,79 @@ window.initConexFlow=(slot)=>{
  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){playbackObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting&&e.intersectionRatio>=.45)){playbackObserver.disconnect();timers.push(setTimeout(()=>{if(!input.value&&!busy&&!stopped)run(true)},500));}},{threshold:[.45]});playbackObserver.observe(slot);}
 };
 current=-1;update();
+})();
+
+/* Product walkthrough: local, prewritten examples; never calls a model or saves a record. */
+(()=>{
+ const prior=window.initConexFlow;let dispose=()=>{};
+ window.initConexFlow=slot=>{
+  dispose();prior?.(slot);
+  if(current===0)return;
+  let epoch=0,observer,dead=false;const timeouts=new Set();
+  dispose=()=>{dead=true;epoch++;observer?.disconnect();for(const id of timeouts)clearTimeout(id);};
+  const pause=ms=>new Promise(resolve=>{const id=setTimeout(()=>{timeouts.delete(id);resolve();},ms);timeouts.add(id);});
+  const bar=document.createElement('div');bar.className='motion-status';
+  bar.innerHTML='<span role="status" aria-live="polite">Ejemplo ilustrativo</span><button type="button">▶ Ver en acción</button>';
+  // All customer-facing labels are Spanish.
+  bar.firstElementChild.textContent='Ejemplo interactivo · Datos ficticios';bar.lastElementChild.textContent='▶ Ver en acción';slot.prepend(bar);
+  const status=text=>bar.firstElementChild.textContent=text;
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let active=false;
+  async function type(elements,token){
+   const parts=[];for(const el of elements){const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let node;while(node=walk.nextNode())if(node.textContent.trim())parts.push([node,node.textContent]);}
+   for(const [node] of parts)node.textContent='';
+   for(const [node,text] of parts){for(let n=0;n<text.length;n+=4){if(dead||token!==epoch)return false;node.textContent=text.slice(0,n+4);await pause(reduced?0:25);}}
+   return !dead&&token===epoch;
+  }
+  const isAcademy=content.label==='ACADEMY';
+  const testButtons=[...slot.querySelectorAll('[data-answer]')];
+  let testRun=0;
+  async function correct(button,automatic=false){
+   const token=++testRun;testButtons.forEach(b=>{b.disabled=true;b.classList.remove('answer-wrong','answer-correct','selected');});button.classList.add('selected');
+   const result=slot.querySelector('.answer-result');result.hidden=false;result.textContent='Comprobando respuesta…';result.className='answer-result checking';status('Corrección de ejemplo en curso…');
+   await pause(650);if(dead||token!==testRun)return;
+   const good=button.dataset.answer==='yes';button.classList.add(good?'answer-correct':'answer-wrong');
+   if(!good)slot.querySelector('[data-answer="yes"]').classList.add('answer-correct');
+   result.className='answer-result '+(good?'correct':'incorrect');result.textContent=good?'Correcto · La respuesta es B. Una Constitución rígida exige un procedimiento especial de reforma.':'Revisa la A · Rígida no significa inmodificable. La correcta es B: la reforma sigue un procedimiento distinto al de una ley ordinaria.';
+   status(good?'Respuesta comprendida · Puedes volver a practicar':'Error explicado · Reintenta la pregunta');testButtons.forEach(b=>b.disabled=false);
+   slot.scrollBy({top:Math.max(0,result.getBoundingClientRect().bottom-slot.getBoundingClientRect().bottom+20),behavior:reduced?'instant':'smooth'});
+  }
+  if(testButtons.length)testButtons.forEach(b=>b.onclick=()=>{epoch++;active=false;bar.lastElementChild.disabled=false;correct(b);});
+  // Restore immutable example text for every replay, without replacing the editable UI.
+  const textRoots=isAcademy?[...slot.querySelectorAll('.assistant-response>div')]:[...slot.querySelectorAll('.paper p,.relato p,.incident-entry>p')];
+  const originals=textRoots.map(el=>el.innerHTML);
+  async function run(){
+   if(active||dead)return;active=true;const token=++epoch;bar.lastElementChild.disabled=true;bar.lastElementChild.textContent='En curso…';
+   const valid=()=>!dead&&token===epoch;
+   textRoots.forEach((el,i)=>el.innerHTML=originals[i]);
+   if(testButtons.length){
+    testButtons.forEach(b=>{b.disabled=true;b.classList.remove('answer-wrong','answer-correct','selected');});slot.querySelector('.answer-result').hidden=true;
+    status('Ejemplo automático: seleccionamos una respuesta');await pause(1100);if(!valid())return;
+    await correct(testButtons[0],true);await pause(2500);if(!valid())return;
+    status('Repaso del error · Probamos la respuesta B');await pause(1000);if(!valid())return;await correct(testButtons[1],true);
+   }else if(textRoots.length){
+    const paper=slot.querySelector('.paper');const actions=[...slot.querySelectorAll('.flow-doc-actions button')];
+    if(paper){paper.contentEditable='false';actions.forEach(b=>b.disabled=true);status('Preparando el borrador · Fuente INC-001');}
+    else status(isAcademy?(current===4?'Preparando un resumen del tema…':current===3?'Revisando la respuesta de práctica…':'Consultando el material de ejemplo…'):'Incorporando el relato de ejemplo…');
+    slot.classList.add('motion-generating');
+    const finished=await type(textRoots,token);if(!finished)return;
+    slot.classList.remove('motion-generating');
+    if(paper){paper.contentEditable='true';actions.forEach(b=>b.disabled=false);status('Borrador preparado · Ahora puedes editar y revisar');}
+    else status(isAcademy?'Ejemplo completado · Contenido predefinido':'Relato incorporado · Origen conservado');
+    const data=[...slot.querySelectorAll('.extraction label')];for(const row of data){if(!valid())return;row.classList.add('motion-highlight');await pause(650);} 
+   }else{
+    const rows=[...slot.querySelectorAll('.flow-data>div,.attention-group,.evidence-row,.create-detail,.flow-timeline li')];
+    status(current===2?'Revisando los datos detectados…':current===4?'Vinculando el original con su fuente…':current===5?'Comprobando requisitos y pendientes…':current===6?'Preparando la revisión · La creación requiere tu confirmación':'Recuperando la actividad del registro…');
+    rows.forEach(el=>el.classList.add('motion-waiting'));
+    for(const row of rows){await pause(650);if(!valid())return;row.classList.remove('motion-waiting');row.classList.add('motion-highlight');}
+    status(current===2?'Datos detectados · Confírmalos tú con su fuente':current===6?'Revisión preparada · Marca la casilla para continuar':'Revisión de ejemplo completada');
+   }
+   if(!valid())return;active=false;bar.lastElementChild.disabled=false;bar.lastElementChild.textContent='↻ Repetir ejemplo';
+  }
+  bar.lastElementChild.onclick=run;
+  // Start only when this scene is actually on screen, never above the fold.
+  if(!reduced){observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting&&e.intersectionRatio>=.45)){observer.disconnect();run();}},{threshold:[.45]});observer.observe(slot);}
+ };
+ current=-1;update();
 })();
 </script></body></html>
